@@ -1,0 +1,33 @@
+# Login
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "username": "qnguyet",
+    "password": "123213213"
+}
+
+# Register
+###
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "username": "baonguyen",
+    "email" : "baonguyen@gmail.com",
+    "password": "123213213"
+}
+
+# GET all users
+###
+GET http://localhost:3000/v1/users
+Authorization: Beaer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDMxODE5NDkyZGE0NTkzMDlkZDA0NSIsImFkbWluIjp0cnVlLCJpYXQiOjE2Nzc5ODExODAsImV4cCI6MTY3Nzk4ODM4MH0.ON5_DxcTxh7t4ZfKus3f1dvhc6IoUk-G1uJ9nOl2IjY
+
+### DELETE a user
+DELETE http://localhost:3000/v1/users/64021691e61bd5ddf66e0447
+Authorization: Beaer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDMxODE5NDkyZGE0NTkzMDlkZDA0NSIsImFkbWluIjp0cnVlLCJpYXQiOjE2Nzc5ODExODAsImV4cCI6MTY3Nzk4ODM4MH0.ON5_DxcTxh7t4ZfKus3f1dvhc6IoUk-G1uJ9nOl2IjY
+
+
+# REFRESH TOKEN
+###
+POST http://localhost:3000/auth/token 
