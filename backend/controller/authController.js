@@ -2,6 +2,7 @@ const bcrypt = require("bcrypt");
 const User = require("../model/User");
 const jwt = require("jsonwebtoken");
 const { generateToken } = require("./tokenController");
+let { redisTokenStore } = require("../model/redisTokenStore");
 
 const authController = {
   registerHandler: async (req, res) => {
@@ -53,6 +54,9 @@ const authController = {
       const payload = { id: user.id, admin: user.admin };
       const { accessToken, refreshToken } = generateToken(payload);
 
+      // Push refresh token to redis database
+      redisTokenStore.push(refreshToken);
+
       res.cookie("refreshToken", refreshToken, {
         httpOnly: true,
         secure: process.env.NODE_ENV !== "development",
@@ -66,25 +70,43 @@ const authController = {
 
   // Update token
   tokenHandler: (req, res) => {
-    const token = req.headers.cookie.split("=")[1];
+    const cookieToken = req.headers.cookie;
+    const token = cookieToken.split("=")[1];
     if (!token) {
       res.status(401).json({ Error: "Invalid token" });
     }
 
+    redisTokenStore = redisTokenStore.filter((tok) => tok !== token);
     const payload = jwt.verify(token, process.env.REFRESH_SECRET_KEY);
-    const { id, admin } = payload;
 
     // GET payload
+    const { id, admin } = payload;
     const { accessToken, refreshToken } = generateToken({ id, admin });
+    redisTokenStore.push(refreshToken);
     res.cookie("refreshToken", refreshToken, {
       httpOnly: true,
       secure: process.env.NODE_ENV !== "development",
+      path: "/",
+      sameSite: "strict",
     });
 
-    res.status(200).json({ accessToken, refreshToken });
+    res.status(200).json({ accessToken, redisTokenStore });
   },
   // Logout
-  logoutHandler: (req, res) => {},
+  logoutHandler: (req, res) => {
+    const cookieToken = req.headers.cookie;
+    const token = cookieToken && cookieToken.split("=")[1];
+    if (!token) {
+      res.status(401).json({ Error: "Not found token" });
+    }
+
+    // Remove refreshToken in cookie
+    res.clearCookie("refreshToken");
+
+    // Remove refresh token in database
+    redisTokenStore = redisTokenStore.filter((tok) => tok !== token);
+    res.status(200).json({ redisTokenStore });
+  },
 };
 
 module.exports = authController;
