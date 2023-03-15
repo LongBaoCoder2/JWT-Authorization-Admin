@@ -1,0 +1,38 @@
+# Login
+POST http://localhost:5050/auth/login
+Content-Type: application/json
+
+{
+    "username": "qnguyet",
+    "password": "123213213"
+}
+
+# Register
+###
+POST http://localhost:5050/auth/register
+Content-Type: application/json
+
+{
+    "username": "longbao",
+    "email" : "baonguyen",
+    "password": "123456",
+    "admin": true
+}
+
+# GET all users
+###
+GET http://localhost:5050/v1/users
+Authorization: Beaer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDMxODE5NDkyZGE0NTkzMDlkZDA0NSIsImFkbWluIjp0cnVlLCJpYXQiOjE2Nzg0NTI4NzAsImV4cCI6MTY3ODQ2MDA3MH0.TXhlwfDrBm5cPqeX506NQ7C8iegfSZ3mqBfsAMWe9tM
+
+### DELETE a user
+DELETE http://localhost:5050/v1/users/64021691e61bd5ddf66e0447
+Authorization: Beaer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDMxODE5NDkyZGE0NTkzMDlkZDA0NSIsImFkbWluIjp0cnVlLCJpYXQiOjE2Nzg0NTcyNzUsImV4cCI6MTY3ODQ2NDQ3NX0.11rRWs9Oqyl2QQGIXhGZZ8ZyDyDjJvMM6Kz3fasWhXs
+
+
+# REFRESH TOKEN
+###
+POST http://localhost:5050/auth/token 
+
+# LOGOUT
+###
+POST http://localhost:5050/auth/logout
