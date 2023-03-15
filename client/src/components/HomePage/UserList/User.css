@@ -1,0 +1,49 @@
+.user {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 15px 100px;
+  margin-bottom: 20px;
+  border: #ccc 2px solid;
+  font-size: 1.1em;
+
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  transition: 200ms ease-in;
+}
+
+.user:hover {
+  background-color: #0046fe;
+  border: 2px solid transparent;
+  color: #fff;
+}
+
+.btn-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn-group > * {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  color: #fff;
+  transition: 200ms;
+  cursor: pointer;
+}
+#btn-delete {
+  background-color: #db6b55;
+}
+#btn-delete:hover {
+  background-color: #ff3d16;
+}
+#btn-check:hover {
+  background-color: #171614;
+}
+#btn-check {
+  background-color: #14141274;
+}
