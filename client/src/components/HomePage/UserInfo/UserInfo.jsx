@@ -1,7 +1,7 @@
 import React from "react";
 import "./UserInfo.css";
 
-const UserInfo = () => {
+const UserInfo = ({ user }) => {
   return (
     <div className="heading">
       <div className="title-info">
@@ -16,8 +16,8 @@ const UserInfo = () => {
           <ion-icon name="search-outline" />
         </div>
         <div className="avatar">
-          Nguyet Quynh
-          <div className="username-tooltip">Sau con</div>
+          {user?.username}
+          <div className="username-tooltip">{user?.email}</div>
         </div>
       </div>
     </div>

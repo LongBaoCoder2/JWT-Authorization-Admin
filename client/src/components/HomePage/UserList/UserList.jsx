@@ -1,33 +1,13 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import User from "./User";
 
-const UserList = () => {
-  const dummyData = [
-    {
-      id: "2",
-      username: "nguyetquynh",
-      email: "nguyetquynh@gmail.com",
-    },
-    {
-      id: "3",
-      username: "longbao",
-      email: "longbao@gmail.com",
-    },
-    {
-      id: "4",
-      username: "hagiang",
-      email: "hagiang@gmail.com",
-    },
-    {
-      id: "5",
-      username: "giahuy",
-      email: "giahuy@gmail.com",
-    },
-  ];
+const UserList = (props) => {
+  const allUser = useSelector((state) => state.users.allUser);
 
   return (
     <div>
-      {dummyData.map((user) => (
+      {allUser?.map((user) => (
         <User key={user.id} username={user.username} email={user.email} />
       ))}
     </div>

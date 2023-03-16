@@ -11,13 +11,19 @@ const userSlice = createSlice({
     getAllUserProcess: (state) => {
       state.isLoading = true;
     },
-    getAllUserSuccess: (state) => {
-      state.isLoading = true;
+    getAllUserSuccess: (state, action) => {
+      state.isLoading = false;
+      state.allUser = action.payload;
+      state.error = false;
     },
     getAllUserFail: (state) => {
-      state.isLoading = true;
+      state.isLoading = false;
+      state.error = true;
     },
   },
 });
+
+export const { getAllUserProcess, getAllUserSuccess, getAllUserFail } =
+  userSlice.actions;
 
 export default userSlice.reducer;
