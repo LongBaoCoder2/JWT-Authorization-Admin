@@ -2,6 +2,9 @@ import {
   loginFail,
   loginProcess,
   loginSuccess,
+  logoutFail,
+  logoutProcess,
+  logoutSuccess,
   registerFail,
   registerProcess,
   registerSuccess,
@@ -19,7 +22,7 @@ export const loginRequest = async (user, dispatch, navigate) => {
       username,
       password,
     });
-    dispatch(loginSuccess(res.data));
+    dispatch(loginSuccess(res.data.user));
     navigate("/");
 
     // Toast controll
@@ -62,5 +65,17 @@ export const registerRequest = async (user, dispatch, navigate) => {
     setTimeout(() => {
       dispatch(closeToast());
     }, 5000);
+  }
+};
+
+export const logoutRequest = async (dispatch, navigate) => {
+  dispatch(logoutProcess());
+  try {
+    const res = await axios.post("/auth/logout");
+    console.log(res);
+    dispatch(logoutSuccess());
+    navigate("/login");
+  } catch (err) {
+    dispatch(logoutFail());
   }
 };
