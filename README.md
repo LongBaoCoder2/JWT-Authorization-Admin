@@ -27,9 +27,12 @@ Simple client with ReactJs.
 
 ### Prerequisites
 
-- [Node.js][nodejs] v10.15 or higher + [Yarn][yarn] v1.17 or higher &nbsp; (_HINT: On Mac install
-  them via [Brew][brew]_)
-- [VS Code][vc] editor (preferred) + [Project Snippets][vcsnippets], [EditorConfig][vceditconfig],
-  [ESLint][vceslint], [Prettier][vcprettier], and [Babel JavaScript][vcjs] plug-ins
-- [Watchman][watchman] file watcher used by Relay Modern
-- [PostgreSQL][postgres] v9.6 or newer, only if you're planning to use a local db for development
+- [Node.js][nodejs] v10.15 or higher
+- [Yarn][yarn] v1.17 or higher &nbsp;
+
+
+
+
+---
+[nodejs]: https://nodejs.org/
+[yarn]: https://yarnpkg.com/
