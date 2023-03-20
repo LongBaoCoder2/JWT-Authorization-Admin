@@ -1,6 +1,8 @@
 # JWT-Authorization-Admin
 
 <h2> Client </h2>
+
+```bash
 ├── node_modules/                  # 3rd-party libraries and utilities
 ├── public/                        # Static files such as favicon.ico etc.                     
 ├── src/                           # Application source code
@@ -16,3 +18,4 @@
 │   ├── App.js                     # Application BrowserRouter
 ├── .env                           # Environment variables for local development
 └── package.json                   # The list of project dependencies + NPM scripts
+```
