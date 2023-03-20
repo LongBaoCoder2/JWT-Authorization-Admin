@@ -6,9 +6,24 @@
 
 Simple client with ReactJs to manager user with admin authorization.
 
-![pic1](https://i.ibb.co/DDL0ZyL/z4185139899398-7e1285e73ed8091a526772fb81dd76cf.jpg)
-![pic2](https://i.ibb.co/qD25qxX/z4185139918698-61069b65bbcd51eb6dcac4f3fbaa9a9b.jpg)
-![pic3](https://i.ibb.co/YTr3Z6X/z4185139993594-0a7eb4314f5db32f88f404929c2675d2.jpg)
+
+<img
+  src="https://i.ibb.co/DDL0ZyL/z4185139899398-7e1285e73ed8091a526772fb81dd76cf.jpg"
+  alt="Alt text"
+  title="Pic1"
+  style="display: inline-block; margin: 10 auto; max-width: 300px">
+
+<img
+  src="https://i.ibb.co/qD25qxX/z4185139918698-61069b65bbcd51eb6dcac4f3fbaa9a9b.jpg"
+  alt="Alt text"
+  title="Pic2"
+  style="display: inline-block; margin: 10 auto; max-width: 300px">
+
+<img
+  src="https://i.ibb.co/YTr3Z6X/z4185139993594-0a7eb4314f5db32f88f404929c2675d2.jpg"
+  alt="Alt text"
+  title="Pic2"
+  style="display: inline-block; margin: 10 auto; max-width: 300px">
 
 
 ### Directory Layout
