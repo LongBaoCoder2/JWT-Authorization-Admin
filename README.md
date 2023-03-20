@@ -25,6 +25,13 @@ Simple client with ReactJs to manager user with admin authorization.
   title="Pic2"
   style="display: inline-block; margin: 10 auto; max-width: 200px">
 
+### Service
+
+- Authentication/Authorization
+- See user info and delete user with admin permission
+- Notification
+- Logout
+
 
 ### Directory Layout
 ```bash
