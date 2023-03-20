@@ -1,7 +1,12 @@
 # JWT-Authorization-Admin
 
-<h2> Client </h2>
 
+
+## Client
+
+Simple client with ReactJs.
+
+### Directory Layout
 ```bash
 ├── node_modules/                  # 3rd-party libraries and utilities
 ├── public/                        # Static files such as favicon.ico etc.                     
@@ -19,3 +24,12 @@
 ├── .env                           # Environment variables for local development
 └── package.json                   # The list of project dependencies + NPM scripts
 ```
+
+### Prerequisites
+
+- [Node.js][nodejs] v10.15 or higher + [Yarn][yarn] v1.17 or higher &nbsp; (_HINT: On Mac install
+  them via [Brew][brew]_)
+- [VS Code][vc] editor (preferred) + [Project Snippets][vcsnippets], [EditorConfig][vceditconfig],
+  [ESLint][vceslint], [Prettier][vcprettier], and [Babel JavaScript][vcjs] plug-ins
+- [Watchman][watchman] file watcher used by Relay Modern
+- [PostgreSQL][postgres] v9.6 or newer, only if you're planning to use a local db for development
