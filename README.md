@@ -1,6 +1,6 @@
 # JWT-Authorization-Admin
 
-Simple project with Redux, JsonWebToken to Authorization Admin. //
+Simple project with Redux, JsonWebToken to Authorization Admin. \
 Developing ...
 
 ## Client
