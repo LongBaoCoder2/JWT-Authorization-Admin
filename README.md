@@ -33,9 +33,9 @@ Simple client with ReactJs to manager user with admin authorization.
 - Logout
 
 ### Stack & Library Tech
-- [Reactjs](https://react.dev/) React lets you build user interfaces out of individual pieces called components.
-- [Redux](https://github.com/reduxjs/redux) Redux is a predictable state container for JavaScript apps.
-- 
+- [Reactjs](https://react.dev/) lets you build user interfaces out of individual pieces called components.
+- [Redux](https://github.com/reduxjs/redux) is a predictable state container for JavaScript apps.
+- [Redux-Toolkit](https://redux-toolkit.js.org/) Redux tool to configuration.
 
 ### Directory Layout
 ```bash
