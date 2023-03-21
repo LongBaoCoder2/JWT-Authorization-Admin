@@ -9,7 +9,7 @@ Simple client with ReactJs to manager user with admin authorization.
 
 
 <img
-  src="https://i.ibb.co/DDL0ZyL/z4185139899398-7e1285e73ed8091a526772fb81dd76cf.jpg"
+  src="https://i.ibb.co/54GmgMT/z4185139899398-7e1285e73ed8091a526772fb81dd76cf-1.jpg"
   alt="Alt text"
   title="Pic1"
   style="display: inline-block; margin: 10 auto; max-width: 200px">
