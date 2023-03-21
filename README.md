@@ -62,7 +62,8 @@ Simple client with ReactJs to manager user with admin authorization.
 - [Node.js][nodejs] v10.15 or higher
 - [Yarn][yarn] v1.17 or higher &nbsp;
 
-
+</br>
+</br>
 
 ## Server
 
