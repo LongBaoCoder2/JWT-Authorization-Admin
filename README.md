@@ -64,7 +64,48 @@ Simple client with ReactJs to manager user with admin authorization.
 
 
 
+## Server
+
+REST API & Auth server build by express and JsonWebToken to Authentication.
+
+### Service
+
+- Authentication/Authorization
+- API to get user info.
+- Store in MongoDB
+
+### Stack & Library Tech
+- [Express](https://expressjs.com/) lets you build API and auth service.
+- [MongoDB](https://www.mongodb.com/) is the developer data platform that provides the services and tools necessary to build distributed applications fast, at the performance and scale users demand.
+- [JsonWebToken](https://jwt.io/) are an open, industry standard RFC 7519 method for representing claims securely between two parties.
+
+### Directory Layout
+```bash
+├── node_modules/                  # 3rd-party libraries and utilities
+├── public/                        # Static files such as favicon.ico etc.                     
+├── src/                           # Application source code
+│   ├── controller                 # Config store redux and provider reducer
+│   ├── middleware/                # Verify Token middleware
+│   ├── model/                     # Config Schema MongoDB and fake redis DB
+│   ├── routes/                    # Contain all routes of server
+│   │   ├── authRouter.js          # Route Authentication/ Authorization
+│   │   ├── userRouter.js            # Route API GET user info
+│   ├── index.js                   # Server entry point
+│   ├── request.htt                # An API platform for using APIs.
+├── .env                           # Environment variables for local development
+└── package.json                   # The list of project dependencies + NPM scripts
+```
+
+### Prerequisites
+
+- [Node.js][nodejs] v10.15 or higher
+- [Yarn][yarn] v1.17 or higher &nbsp;
+- [MongoDB][mongodb] account and connect to MONGODB Compass or Shell,...
+
 
 ---
 [nodejs]: https://nodejs.org/
 [yarn]: https://yarnpkg.com/
+[mongodb]: https://www.mongodb.com/
+
+
