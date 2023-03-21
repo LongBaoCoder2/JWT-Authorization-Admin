@@ -1,6 +1,6 @@
 # JWT-Authorization-Admin
 
-
+Simple project with Redux, JsonWebToken to Authorization Admin.
 
 ## Client
 
@@ -32,6 +32,10 @@ Simple client with ReactJs to manager user with admin authorization.
 - Notification
 - Logout
 
+### Stack & Library Tech
+- [Reactjs](https://react.dev/) React lets you build user interfaces out of individual pieces called components.
+- [Redux](https://github.com/reduxjs/redux) Redux is a predictable state container for JavaScript apps.
+- 
 
 ### Directory Layout
 ```bash
