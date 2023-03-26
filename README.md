@@ -92,9 +92,9 @@ REST API & Auth server build by express and JsonWebToken to Authentication.
 │   ├── model/                     # Config Schema MongoDB and fake redis DB
 │   ├── routes/                    # Contain all routes of server
 │   │   ├── authRouter.js          # Route Authentication/ Authorization
-│   │   ├── userRouter.js            # Route API GET user info
+│   │   ├── userRouter.js          # Route API GET user info
 │   ├── index.js                   # Server entry point
-│   ├── request.htt                # An API platform for using APIs.
+│   ├── request.http               # An API platform for using APIs.
 ├── .env                           # Environment variables for local development
 └── package.json                   # The list of project dependencies + NPM scripts
 ```
